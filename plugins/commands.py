@@ -219,7 +219,7 @@ async def start(client:Client, message):
         m=await message.reply_sticker("CAACAgUAAxkBAAIGyGb-12ufO3CTJMdS0Z8gFNL59fqgAAJuAAOsH5ce8_g6hKj4LREeBA") 
         await asyncio.sleep(1)
         await m.delete()
-        await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
+        await message.reply_photo(photo=random.choice(START_IMG), caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
